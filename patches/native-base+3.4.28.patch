@@ -1,0 +1,28 @@
+diff --git a/node_modules/native-base/src/core/NativeBaseProvider.tsx b/node_modules/native-base/src/core/NativeBaseProvider.tsx
+index 43b4bd1..c7e9577 100644
+--- a/node_modules/native-base/src/core/NativeBaseProvider.tsx
++++ b/node_modules/native-base/src/core/NativeBaseProvider.tsx
+@@ -4,7 +4,6 @@ import {
+   Metrics,
+   initialWindowMetrics as defaultInitialWindowMetrics,
+ } from 'react-native-safe-area-context';
+-import { SSRProvider } from '@react-native-aria/utils';
+ import { theme as defaultTheme, ITheme } from './../theme';
+ import type { IColorModeProviderProps } from './color-mode';
+ import HybridProvider from './hybrid-overlay/HybridProvider';
+@@ -39,7 +38,6 @@ const defaultInitialWindowMetricsBasedOnPlatform: Metrics | null = Platform.sele
+ export interface NativeBaseProviderProps {
+   theme?: ITheme;
+   colorModeManager?: IColorModeProviderProps['colorModeManager'];
+-  children?: React.ReactNode;
+   initialWindowMetrics?: any;
+   config?: INativebaseConfig;
+   isSSR?: boolean;
+@@ -51,7 +49,6 @@ const NativeBaseProvider = (props: NativeBaseProviderProps) => {
+   const {
+     colorModeManager,
+     config = defaultConfig,
+-    children,
+     theme: propsTheme = defaultTheme,
+     initialWindowMetrics,
+     isSSR,
