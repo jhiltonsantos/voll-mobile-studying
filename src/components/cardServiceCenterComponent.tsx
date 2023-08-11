@@ -1,17 +1,24 @@
 import { Text, Avatar, VStack } from 'native-base'
 import { ButtonComponent } from './buttonComponent'
-import { ReactNode } from 'react';
 
 interface CardServiceCenterProps {
     name: string
     avatar: string
     specialty: string
+    date?: string
+    isCompleted?: boolean
+    isScheduled?: boolean
+    onPress?: () => void;
 }
 
 export function CardServiceCenterComponent({
     name,
     avatar,
     specialty,
+    date,
+    isCompleted,
+    isScheduled,
+    onPress
 }: CardServiceCenterProps) {
     return (
         <VStack
@@ -39,6 +46,7 @@ export function CardServiceCenterComponent({
             <ButtonComponent
                 buttonText={'Agendar consulta'}
                 marginTop={4}
+                onPress={onPress}
             />
         </VStack>
     )

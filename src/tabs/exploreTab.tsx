@@ -7,8 +7,9 @@ import { InputComponent } from '../components/inputComponent'
 import { ButtonComponent } from '../components/buttonComponent'
 import { searchSpecialistByState } from '../services/specialistService'
 import { Specialist } from '../interfaces/Specialist'
+import { NavigationProps } from '../@types/navigation'
 
-const ExploreTab = () => {
+const ExploreTab = ({ navigation }: NavigationProps<'ExploreTab'>) => {
 	const [stateLoc, setStateLoc] = useState('')
 	const [specialty, setSpecialty] = useState('')
 	const [resultSearch, setResultSearch] = useState([])
@@ -76,9 +77,10 @@ const ExploreTab = () => {
 					resultSearch?.map((specialist: Specialist, index) => (
 						<VStack marginBottom={5} key={index}>
 							<CardServiceCenterComponent
-								name={specialist.nome}
-								avatar={specialist.imagem}
-								specialty={specialist.especialidade}
+								name={specialist?.nome}
+								avatar={specialist?.imagem}
+								specialty={specialist?.especialidade}
+								onPress={() => navigation.navigate('ScheduleScreen', { specialistID: specialist.id })}
 							/>
 						</VStack>
 					))

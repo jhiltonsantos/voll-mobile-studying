@@ -1,14 +1,14 @@
 import api from "./api";
 
 export async function searchSpecialistByState(
-  estado: string,
-  especialidade: string
+  state: string,
+  specialty: string
 ) {
   try {
     const result = await api.get("/especialista/busca", {
       params: {
-        estado,
-        especialidade,
+        estado: state,
+        especialidade: specialty,
       },
     });
     return result.data;

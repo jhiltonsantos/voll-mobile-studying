@@ -8,6 +8,7 @@ interface CardServiceProps {
     date?: string
     isCompleted?: boolean
     isScheduled?: boolean
+    onPress?: () => void
 }
 
 export function CardServiceComponent({
@@ -16,7 +17,9 @@ export function CardServiceComponent({
     specialty,
     date,
     isScheduled,
-    isCompleted
+    isCompleted,
+    onPress,
+    ...otherProps
 }: CardServiceProps) {
     return (
         <VStack
@@ -25,6 +28,7 @@ export function CardServiceComponent({
             padding={5}
             borderRadius="lg"
             shadow={2}
+            {...otherProps}
         >
             <VStack flexDir="row">
                 <Avatar
@@ -41,6 +45,7 @@ export function CardServiceComponent({
             <ButtonComponent
                 buttonText={isScheduled ? 'Cancelar' : 'Agendar consulta'}
                 marginTop={4}
+                onPress={onPress}
             />
         </VStack>
     )

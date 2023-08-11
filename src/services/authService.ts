@@ -5,8 +5,8 @@ export async function login(email: string, senha: string) {
 
   try {
     const result = await api.post("/auth/login", {
-      email,
-      senha,
+      email: email,
+      senha: senha,
     });
 
     console.log(result.data);
