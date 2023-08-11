@@ -1,12 +1,12 @@
 import { VStack, Text, ScrollView, Card, Divider, Box } from 'native-base'
-import { ImageLogoComponent } from '../components/imageLogoComponent';
-import { TitleComponent } from '../components/titleComponent';
-import { InputComponent } from '../components/inputComponent';
-import { ButtonComponent } from '../components/buttonComponent';
-import { CommentTextComponent } from '../components/commentTextComponent';
+import { ImageLogoComponent } from '../../components/imageLogoComponent';
+import { TitleComponent } from '../../components/titleComponent';
+import { InputComponent } from '../../components/inputComponent';
+import { ButtonComponent } from '../../components/buttonComponent';
+import { CommentTextComponent } from '../../components/commentTextComponent';
 
-import { comments } from '../utils/commentsText';
-import { CardSearchServiceComponent } from '../components/cardSearchServiceComponent';
+import { comments } from '../../utils/commentsText';
+import { CardSearchServiceComponent } from '../../components/cardSearchServiceComponent';
 
 const MainTab = () => {
     return (

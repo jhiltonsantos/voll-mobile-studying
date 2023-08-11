@@ -2,9 +2,9 @@ import { Input, VStack, useToast } from 'native-base'
 import { useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-import { ButtonComponent } from './components/buttonComponent'
-import { convertStringToDate } from './utils/convertStringToDate'
-import { scheduleAppointment } from './services/appointmentService'
+import { ButtonComponent } from '../components/buttonComponent'
+import { convertStringToDate } from '../utils/convertStringToDate'
+import { scheduleAppointment } from '../services/appointmentService'
 
 export default function ScheduleScreen({ route, navigation }: any) {
   const [date, setDate] = useState('')

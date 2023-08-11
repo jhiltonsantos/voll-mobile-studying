@@ -1,13 +1,13 @@
 import { Divider, ScrollView, VStack, useToast } from 'native-base'
-import { CardServiceComponent } from '../components/cardServiceComponent';
-import { TitleComponent } from '../components/titleComponent';
-import { ButtonComponent } from '../components/buttonComponent';
+import { CardServiceComponent } from '../../components/cardServiceComponent';
+import { TitleComponent } from '../../components/titleComponent';
+import { ButtonComponent } from '../../components/buttonComponent';
 import { useEffect, useState } from 'react';
-import { Appointment } from '../interfaces/Appointment';
+import { Appointment } from '../../interfaces/Appointment';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getClientAppointments } from '../services/clientService';
-import { NavigationProps } from '../@types/navigation';
-import { removeAppointment } from '../services/appointmentService';
+import { getClientAppointments } from '../../services/clientService';
+import { NavigationProps } from '../../@types/navigation';
+import { removeAppointment } from '../../services/appointmentService';
 import { useIsFocused } from '@react-navigation/native';
 
 const ServiceTab = ({ navigation }: NavigationProps<'ServiceTab'>) => {

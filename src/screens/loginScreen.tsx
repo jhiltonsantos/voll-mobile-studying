@@ -3,12 +3,12 @@ import { TouchableOpacity } from 'react-native';
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import jwtDecode from "jwt-decode";
 
-import { TitleComponent } from "./components/titleComponent";
-import { InputComponent } from "./components/inputComponent";
-import { ButtonComponent } from "./components/buttonComponent";
-import { ImageLogoComponent } from "./components/imageLogoComponent";
+import { TitleComponent } from "../components/titleComponent";
+import { InputComponent } from "../components/inputComponent";
+import { ButtonComponent } from "../components/buttonComponent";
+import { ImageLogoComponent } from "../components/imageLogoComponent";
 import { useEffect, useState } from "react";
-import { login } from "./services/authService";
+import { login } from "../services/authService";
 
 export default function LoginScreen({ navigation }: any) {
   const [email, setEmail] = useState('')

@@ -1,10 +1,10 @@
 import { Text, ScrollView, Avatar, Divider, VStack } from 'native-base'
-import { TitleComponent } from '../components/titleComponent';
+import { TitleComponent } from '../../components/titleComponent';
 import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { getClientData } from '../services/clientService';
-import { Client } from '../interfaces/Client';
-import { ButtonComponent } from '../components/buttonComponent';
+import { getClientData } from '../../services/clientService';
+import { Client } from '../../interfaces/Client';
+import { ButtonComponent } from '../../components/buttonComponent';
 
 const ProfileTab = ({ navigation }: any) => {
 	const [dataClient, setDataClient] = useState({} as Client)

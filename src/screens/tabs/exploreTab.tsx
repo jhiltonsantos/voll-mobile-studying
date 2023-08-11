@@ -1,13 +1,13 @@
 import { Box, ScrollView, VStack } from 'native-base'
 import { useState } from "react"
 
-import { TitleComponent } from '../components/titleComponent'
-import { CardServiceCenterComponent } from '../components/cardServiceCenterComponent'
-import { InputComponent } from '../components/inputComponent'
-import { ButtonComponent } from '../components/buttonComponent'
-import { searchSpecialistByState } from '../services/specialistService'
-import { Specialist } from '../interfaces/Specialist'
-import { NavigationProps } from '../@types/navigation'
+import { TitleComponent } from '../../components/titleComponent'
+import { CardServiceCenterComponent } from '../../components/cardServiceCenterComponent'
+import { InputComponent } from '../../components/inputComponent'
+import { ButtonComponent } from '../../components/buttonComponent'
+import { searchSpecialistByState } from '../../services/specialistService'
+import { Specialist } from '../../interfaces/Specialist'
+import { NavigationProps } from '../../@types/navigation'
 
 const ExploreTab = ({ navigation }: NavigationProps<'ExploreTab'>) => {
 	const [stateLoc, setStateLoc] = useState('')

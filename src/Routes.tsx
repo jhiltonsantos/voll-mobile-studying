@@ -2,11 +2,11 @@ import React from "react";
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import LoginScreen from "./loginScreen";
-import RegisterScreen from "./registerScreen";
-import Tabs from "./tabs";
-import ScheduleScreen from "./scheduleScreen";
-import ExploreTab from "./tabs/exploreTab";
+import LoginScreen from "./screens/loginScreen";
+import RegisterScreen from "./screens/registerScreen";
+import Tabs from "./screens/tabs";
+import ScheduleScreen from "./screens/scheduleScreen";
+import ExploreTab from "./screens/tabs/exploreTab";
 
 const Tab = createNativeStackNavigator();
 

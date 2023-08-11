@@ -3,13 +3,13 @@ import { useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import jwtDecode from "jwt-decode";
 
-import { TitleComponent } from "./components/titleComponent";
-import { InputComponent } from "./components/inputComponent";
-import { ButtonComponent } from "./components/buttonComponent";
-import { ImageLogoComponent } from "./components/imageLogoComponent";
-import { sessions } from "./utils/registerInputsText";
-import { registerClient } from "./services/clientService";
-import { login } from "./services/authService";
+import { TitleComponent } from "../components/titleComponent";
+import { InputComponent } from "../components/inputComponent";
+import { ButtonComponent } from "../components/buttonComponent";
+import { ImageLogoComponent } from "../components/imageLogoComponent";
+import { sessions } from "../utils/registerInputsText";
+import { registerClient } from "../services/clientService";
+import { login } from "../services/authService";
 
 export default function RegisterScreen({ navigation }: any) {
   const [numberSession, setNumberSession] = useState(0);
